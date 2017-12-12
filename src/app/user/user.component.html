@@ -1,0 +1,60 @@
+<header class="w3-container" style="padding-top:22px">
+  <h5><b><i class="fa fa-users fa-fw"></i> Topup</b></h5>
+</header>
+
+<div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-users w3-xxlarge"></i></div>
+        <div class="w3-right">
+          <h3 *ngIf="userTotal">{{userTotal}}</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Total Users</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-users w3-xxlarge"></i></div>
+        <div class="w3-right">
+          <h3 *ngIf="userCome">{{userCome}}</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Users come </h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-users w3-xxlarge"></i></div>
+        <div class="w3-right">
+          <h3 *ngIf="userNotCome">{{userNotCome}}</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Users not come </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-row-padding">
+    <h5>Recent Topup</h5>
+    <div class="w3-quarter">
+      <div class="w3-container w3-green w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-users w3-xxlarge"></i></div>
+        <div class="w3-right">
+          <h3 *ngIf="userIn">{{userIn}}</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Users in</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-users w3-xxlarge"></i></div>
+        <div class="w3-right">
+          <h3 *ngIf="userOut">{{userOut}}</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Users out</h4>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,63 @@
+<header class="w3-container" style="padding-top:22px">
+  <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+</header>
+
+ <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-green w3-padding-16">
+        <div class="w3-left"><i class="fa fa-money w3-xxlarge"></i></div>
+        <div class="w3-right">
+          <h3 *ngIf="dataTotal">{{dataTotal}}</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Top Up</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-padding-16">
+        <div class="w3-left"><i class="fa fa-money w3-xxlarge"></i></div>
+        <div class="w3-right">
+          <h3 *ngIf="dataWithdraw">{{dataWithdraw}}</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Withdraw</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue w3-padding-16">
+        <div class="w3-left"><i class="fa fa-buysellads w3-xxlarge"></i></div>
+        <div class="w3-right">
+          <h3 *ngIf="dataSale">{{dataSale}}</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Sale Amount</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-users w3-xxlarge"></i></div>
+        <div class="w3-right">
+          <h3 *ngIf="dataUser">{{dataUser}}</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Users</h4>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="w3-container">
+    <h5>Recent Topup</h5>
+    <div class="col-md-12">
+      <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+  </div>
